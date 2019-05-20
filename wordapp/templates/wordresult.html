@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block contents %}
+<h1>당신이 입력한 텍스트는 {{total}}로 구성되어 있습니다.</h1>
+
+<a href="{%url 'wordhome' %}">다시하기</a>
+<br>
+<h2> 입력한 텍스트</h2>
+{{full}}
+
+<h2>단어 카운트: </h2>
+{{dictionary}}
+{% for word, howmany in dictionary %}
+<br>
+{{word}} : {{howmany}}
+{%endfor%}
+{% endblock %}
