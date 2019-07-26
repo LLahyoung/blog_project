@@ -8,6 +8,9 @@ def wordhome(request):
 def worddetail(request):
     return render(request, 'worddetail.html')
 
+def wordabout(request):
+    return render(request, 'wordabout.html')
+
 def wordresult(request):
     text=request.GET['fulltext']
     words=text.split()
